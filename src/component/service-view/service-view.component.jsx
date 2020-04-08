@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ServiceContext } from "../../context/servicesOptions/serivice.context";
+import { ServiceContext } from "../../context/service-context/service.context";
 import ServiceItem from "../service-item/service-item.component";
 import { Title } from "../../global.styles";
 import { ServiceViewContainer, Container } from "./service-view.styles";
@@ -10,7 +10,7 @@ const ServiceView = () => {
       <Title>Servicios</Title>
       <ServiceViewContainer>
         {servicesOptions.map((service) => (
-          <ServiceItem key={service.route} service={service} />
+          <ServiceItem key={service.id} service={service} />
         ))}
       </ServiceViewContainer>
     </Container>

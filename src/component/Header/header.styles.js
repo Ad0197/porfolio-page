@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 
 export const HeaderContainer = styled.div`
-  height: 70px;
+  height: 8vh;
   display: flex;
   align-items: center;
   justify-content: space-between;

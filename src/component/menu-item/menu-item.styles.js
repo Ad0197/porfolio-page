@@ -5,7 +5,7 @@ export const Option = styled(Link)`
   padding: 0 20px;
   color: black;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 2vh;
   font-weight: bold;
   display: flex;
   align-items: center;

@@ -6,7 +6,7 @@ export const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #2e3192;
+  background-color: ${({ bgColor }) => bgColor};
   color: white;
 `;
 
