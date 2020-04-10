@@ -3,6 +3,7 @@ import { Switch } from "react-router-dom";
 
 export const GlobalStyle = createGlobalStyle`
 body{
+    min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -12,7 +13,6 @@ body{
 `;
 
 export const MainContainer = styled.div`
-  height: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

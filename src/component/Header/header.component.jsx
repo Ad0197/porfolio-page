@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import {useHistory} from "react-router-dom";
-import MenuOptionsContext from "../../context/menuOptions/menu.context";
+import MenuOptionsContext from "../../context/menu-options/menu.context";
 import MenuItem from "../menu-item/menu-item.component";
 import {
   HeaderContainer,

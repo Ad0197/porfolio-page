@@ -10,7 +10,7 @@ export const ServiceContainer = styled.div`
 
 export const Info = styled.div`
   height: 100%;
-  padding: 20px 0 0 20px;
+  padding: 20px 0 0 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,9 +27,9 @@ export const Image = styled.div`
 
 export const Title = styled.h2`
   text-align: center;
-  color: black;
+  color: white;
   padding: 0 10px;
-  background: white;
+  /* background: white; */
 `;
 export const TextContainer = styled.div`
   display: flex;
@@ -56,8 +56,10 @@ export const ImageContainer = styled.div`
   height: 100%;
 
   &:hover {
+    opacity: 0.7;
     & > div:last-child {
       display: flex;
+     
     }
   }
   & > div:last-child {
@@ -71,6 +73,7 @@ export const ImageContainer = styled.div`
     opacity: 0.9;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 500;
+    filter: blur(0);
 
     & > h2 {
       position: relative;

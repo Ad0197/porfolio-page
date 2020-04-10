@@ -1,10 +1,11 @@
 import React from "react";
-import {Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Header from "./component/header/header.component";
 import { GlobalStyle, MainContainer, SwitchContainer } from "./global.styles";
 import HomePage from "./pages/homepage/home.page";
 import ServicePage from "./pages/servicepage/service.page";
 import Footer from "./component/footer/footer.component";
+import TechnologyPage from "./pages/technology-page/technology.page";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <SwitchContainer>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/service" component={ServicePage} />
+          <Route exact path="/tech" component={TechnologyPage} />
         </SwitchContainer>
         <Footer />
       </MainContainer>
