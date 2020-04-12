@@ -1,34 +1,37 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const RoundedButtom = styled.div`
+const buttonstyles = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px 30px;
   border: ${({ bgColor }) => (bgColor ? "none" : "3px solid black")};
   font-weight: bold;
   color: ${({ txtColor }) => txtColor || "black"};
   background-color: ${({ bgColor }) => bgColor || "white"};
-  border-radius: 50px;
-
+  ${({ inverted }) =>
+    inverted
+      ? `
+  &{
+    opacity: 0.5;    
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);; 
+    color:white;
+  }
+    `
+      : ""}
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: ${({ inverted }) => (inverted ? "white" : "black")};
+    color: ${({ inverted }) => (inverted ? "black" : "white")};
     cursor: pointer;
   }
 `;
 
-export const RectangleButton = styled.div`
-  padding: 20px 30px;
-  font-size: 25px;
-  border: ${({ bgColor }) => (bgColor ? "none" : "3px solid black")};
-  font-weight: bold;
-  color: ${({ txtColor }) => txtColor || "black"};
-  background-color: ${({ bgColor }) => bgColor || "white"};
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const RoundedButtom = styled.div`
+  ${buttonstyles}
+  border-radius: 50px;
+`;
 
-  &:hover {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-  }
+export const RectangleButton = styled.div`
+  ${buttonstyles}
 `;
